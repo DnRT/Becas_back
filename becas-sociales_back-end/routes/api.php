@@ -15,6 +15,6 @@ use App\Http\Controllers\AlumnosController;
 |
 */
 
-Route::middleware('auth:sanctum')->prefix('test')->group(function() {
+Route::middleware('auth:web')->prefix('test')->group(function() {
     Route::apiResource('/alumnos', AlumnosController::class);
 });

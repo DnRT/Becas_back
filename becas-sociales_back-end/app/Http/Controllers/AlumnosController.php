@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Alumno;
 use App\Http\Requests\StoreAlumnoRequest;
 use App\Http\Requests\UpdateAlumnoRequest;
+use App\Http\Resources\AlumnosResource;
 
 class AlumnosController extends Controller
 {
@@ -15,7 +16,7 @@ class AlumnosController extends Controller
      */
     public function index()
     {
-        //
+        return AlumnoResource::collection(Alumno::all());
     }
 
     /**
@@ -47,16 +48,7 @@ class AlumnosController extends Controller
      */
     public function show(Alumno $alumno)
     {
-        return response()->json([
-            'data' => [
-                'tipo'=> 'Alumno',
-                'rut' => $alumno->rut,
-                'nombre' => $alumno->nombre,
-                'apellido' => $alumno->apellido,
-                'edad' => $alumno->edad,
-                'direccion' => $alumno->direccion
-            ]
-        ]);
+        return new AlumnosResource($alumno);
     }
 
     /**
