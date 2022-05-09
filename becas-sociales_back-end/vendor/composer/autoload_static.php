@@ -411,8 +411,8 @@ class ComposerStaticInit28c7018495fe56e72aa2f00fbaaa4d83
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces/src',
-            1 => __DIR__ . '/..' . '/league/uri/src',
+            0 => __DIR__ . '/..' . '/league/uri/src',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces/src',
         ),
         'League\\OAuth2\\Server\\' => 
         array (
@@ -603,6 +603,7 @@ class ComposerStaticInit28c7018495fe56e72aa2f00fbaaa4d83
         'App\\Http\\Resources\\AlumnosResource' => __DIR__ . '/../..' . '/app/Http/Resources/AlumnosResource.php',
         'App\\Models\\Alumno' => __DIR__ . '/../..' . '/app/Models/Alumno.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\login' => __DIR__ . '/../..' . '/app/Models/login.php',
         'App\\Policies\\AlumnoPolicy' => __DIR__ . '/../..' . '/app/Policies/AlumnoPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -715,6 +716,7 @@ class ComposerStaticInit28c7018495fe56e72aa2f00fbaaa4d83
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\AlumnoFactory' => __DIR__ . '/../..' . '/database/factories/AlumnoFactory.php',
+        'Database\\Factories\\LoginFactory' => __DIR__ . '/../..' . '/database/factories/LoginFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\AlumnoSeeder' => __DIR__ . '/../..' . '/database/seeders/AlumnoSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
