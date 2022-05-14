@@ -98,7 +98,7 @@ return [
             'throttle' => 60,
         ],
         'login' => [
-            'provider' => 'login',
+            'provider' => 'correo_electronico',
             'table' => 'password_resets',
             'expire' => 60,
         ],
