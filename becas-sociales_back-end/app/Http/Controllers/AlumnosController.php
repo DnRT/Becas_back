@@ -6,6 +6,7 @@ use App\Models\Alumno;
 use App\Http\Requests\StoreAlumnoRequest;
 use App\Http\Requests\UpdateAlumnoRequest;
 use App\Http\Resources\AlumnosResource;
+use Illuminate\Support\Facades\DB;
 
 class AlumnosController extends Controller
 {
@@ -16,7 +17,8 @@ class AlumnosController extends Controller
      */
     public function index()
     {
-        return AlumnoResource::collection(Alumno::all());
+        $response = DB::table('alumnos')->get();
+        return $response;
     }
 
     /**
@@ -37,7 +39,15 @@ class AlumnosController extends Controller
      */
     public function store(StoreAlumnoRequest $request)
     {
-        //
+        $response = DB::table('alumnos')->insert([
+            'Rut' => $request->rut,
+            'Nombre' => $request->nombre,
+            'Apellido' => $request->apellido,
+            'Edad' => $request->edad,
+            'Direccion' => $request->direccion,
+            'Correo' => $request->correo,
+            'Contrasena' => $request->contrasena,
+        ]);
     }
 
     /**
@@ -48,7 +58,9 @@ class AlumnosController extends Controller
      */
     public function show(Alumno $alumno)
     {
-        return new AlumnosResource($alumno);
+        $response = DB::table('alumnos')->where('id',$alumno['Id'])->first();
+
+        return $response;
     }
 
     /**

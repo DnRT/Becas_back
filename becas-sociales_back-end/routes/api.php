@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnosController;
-#use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +16,6 @@ use App\Http\Controllers\AlumnosController;
 |
 */
 
-Route::middleware('auth:web')->prefix('test')->group(function() {
+Route::prefix('test')->group(function() {
     Route::apiResource('/alumnos', AlumnosController::class);
-/*     Route::post('/login', ['as'=>'login','uses'=>'LoginController@do']);
-    Route::get('/login',[LoginController::class, 'validator']); */
 });

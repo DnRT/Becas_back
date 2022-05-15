@@ -5,16 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\login;
 use App\Http\Requests\StoreloginRequest;
 use App\Http\Requests\UpdateloginRequest;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
+#use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    use RegisterUsers;
-    public function __construct(){
+    /* public function __construct(){
         $this -> middleware('guest');
-    }
-    protected function validator(array $data)
+    } */
+   /*  protected function validator(array $data)
     {
         return Validator::make($data, [
             'email' => 'required|string|email|max:255|unique:login',
@@ -28,5 +27,22 @@ class LoginController extends Controller
             'passcode' => bcrypt($data['passcode']),
             'active' => 1,
         ]);
+    } */
+    public function validator()
+    {
+        /* $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('dashboard');
+        }
+ 
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email'); */
     }
 }

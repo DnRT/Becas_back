@@ -14,7 +14,8 @@ class AlumnosResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+        return $request;
+        /* return [
             'id' => (string)$this->id,
             'tipo' => 'Alumno',
             'atributos' => [
@@ -24,6 +25,6 @@ class AlumnosResource extends JsonResource
                 'edad' => (string)$this->edad,
                 'direccion' => $this->direccion
             ]
-        ];
+        ]; */
     }
 }
