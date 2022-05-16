@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnosController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,5 @@ use App\Http\Controllers\LoginController;
 
 Route::prefix('test')->group(function() {
     Route::apiResource('/alumnos', AlumnosController::class);
+    Route::apiResource('/administradores', AdminController::class);
 });
