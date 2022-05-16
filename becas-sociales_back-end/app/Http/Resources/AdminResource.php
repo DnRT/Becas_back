@@ -3,8 +3,9 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Log;
 
-class AlumnosResource extends JsonResource
+class AdminResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,17 +15,15 @@ class AlumnosResource extends JsonResource
      */
     public function toArray($request)
     {
-        return $request;
-        /* return [
-            'id' => (string)$this->id,
-            'tipo' => 'Alumno',
-            'atributos' => [
-                'rut' => $this->rut,
-                'nombre' => $this->nombre,
-                'apellido' => $this->apellido,
-                'edad' => (string)$this->edad,
-                'direccion' => $this->direccion
+        return [
+            'id' => $this->id,
+            'tipo' => 'Administrador',
+            'data' => [
+                'rut' => $this->Rut,
+                'nombre' => $this->Nombre,
+                'apellido' => $this->Apellido,
+                'correo' => $this->Correo
             ]
-        ]; */
+        ];
     }
 }
