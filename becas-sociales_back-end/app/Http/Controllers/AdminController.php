@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\admin;
+use App\Models\Admin;
 use App\Http\Requests\StoreadminRequest;
 use App\Http\Requests\UpdateadminRequest;
 use Illuminate\Support\Facades\DB;
@@ -51,10 +51,10 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\admin  $admin
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(admin $admin)
+    public function show(Admin $admin)
     {
         echo $admin;
         $response = DB::table('administrador')->where('id',$admin['ID'])->first();
