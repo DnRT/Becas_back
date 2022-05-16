@@ -14,17 +14,17 @@ class AlumnosResource extends JsonResource
      */
     public function toArray($request)
     {
-        return $request;
-        /* return [
-            'id' => (string)$this->id,
+        return [
+            'id' => $this->Id,
             'tipo' => 'Alumno',
-            'atributos' => [
-                'rut' => $this->rut,
-                'nombre' => $this->nombre,
-                'apellido' => $this->apellido,
-                'edad' => (string)$this->edad,
-                'direccion' => $this->direccion
+            'data' => [
+                'rut' => $this->Rut,
+                'nombre' => $this->Nombre,
+                'apellido' => $this->Apellido,
+                'edad' => $this->Edad,
+                'direccion' => $this->Direccion,
+                'correo' => $this->Correo
             ]
-        ]; */
+        ];
     }
 }

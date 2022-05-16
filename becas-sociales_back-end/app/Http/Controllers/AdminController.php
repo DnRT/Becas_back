@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\admin;
+use App\Models\Admin;
 use App\Http\Requests\StoreadminRequest;
 use App\Http\Requests\UpdateadminRequest;
 use Illuminate\Support\Facades\DB;
+use App\Http\Resources\AdminResource;
+use Illuminate\Support\Facades\Log;
 
 class AdminController extends Controller
 {
@@ -16,9 +18,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $response = DB::table('administrador')->get();
-
-        return $response;
+        return AdminResource::collection(Admin::all());
     }
 
     /**
@@ -51,15 +51,12 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\admin  $admin
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(admin $admin)
+    public function show(Admin $administradore)
     {
-        echo $admin;
-        $response = DB::table('administrador')->where('id',$admin['ID'])->first();
-
-        return $response;
+        return new AdminResource($administradore);
     }
 
     /**
@@ -68,7 +65,7 @@ class AdminController extends Controller
      * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(admin $admin)
+    public function edit(Admin $administradore)
     {
         //
     }
@@ -80,7 +77,7 @@ class AdminController extends Controller
      * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateadminRequest $request, admin $admin)
+    public function update(UpdateadminRequest $request, Admin $administradore)
     {
         //
     }
@@ -91,7 +88,7 @@ class AdminController extends Controller
      * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(admin $admin)
+    public function destroy(Admin $administradore)
     {
         //
     }

@@ -17,8 +17,7 @@ class AlumnosController extends Controller
      */
     public function index()
     {
-        $response = DB::table('alumnos')->get();
-        return $response;
+        return AlumnosResource::collection(Alumno::all());
     }
 
     /**
@@ -58,9 +57,7 @@ class AlumnosController extends Controller
      */
     public function show(Alumno $alumno)
     {
-        $response = DB::table('alumnos')->where('id',$alumno['Id'])->first();
-
-        return $response;
+        return new AlumnosResource($alumno);
     }
 
     /**
