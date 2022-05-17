@@ -39,13 +39,8 @@ class AdminController extends Controller
      */
     public function store(StoreadminRequest $request)
     {
-        $response = DB::table('administrador')->insert([
-            'Rut' => $request->rut,
-            'Nombre' => $request->nombre,
-            'Apellido' => $request->apellido,
-            'Correo' => $request->correo,
-            'Contrasena' => $request->contrasena,
-        ]);
+        $admin = Admin::create($request->validate());
+        return new AdminResource($admin);
     }
 
     /**

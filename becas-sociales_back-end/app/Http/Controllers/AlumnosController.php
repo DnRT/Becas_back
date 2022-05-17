@@ -38,15 +38,8 @@ class AlumnosController extends Controller
      */
     public function store(StoreAlumnoRequest $request)
     {
-        $response = DB::table('alumnos')->insert([
-            'Rut' => $request->rut,
-            'Nombre' => $request->nombre,
-            'Apellido' => $request->apellido,
-            'Edad' => $request->edad,
-            'Direccion' => $request->direccion,
-            'Correo' => $request->correo,
-            'Contrasena' => $request->contrasena,
-        ]);
+        $alumno = Alumno::create($request->validate());
+        return new AlumnosResource($alumno);
     }
 
     /**
