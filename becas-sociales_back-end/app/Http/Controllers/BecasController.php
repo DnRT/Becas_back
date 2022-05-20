@@ -84,6 +84,6 @@ class BecasController extends Controller
      */
     public function destroy(Becas $beca)
     {
-        //
+        $beca->delete();
     }
 }

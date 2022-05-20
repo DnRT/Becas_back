@@ -15,7 +15,7 @@ class AlumnosResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->Id,
+            'id' => $this->id,
             'tipo' => 'Alumno',
             'data' => [
                 'rut' => $this->Rut,

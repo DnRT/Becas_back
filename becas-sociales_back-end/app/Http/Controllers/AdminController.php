@@ -74,7 +74,10 @@ class AdminController extends Controller
      */
     public function update(UpdateadminRequest $request, Admin $administradore)
     {
-        //
+        return Log::info($request);
+        /* $administradore->update([
+            'Rut'=> $request
+        ]); */
     }
 
     /**
@@ -85,6 +88,6 @@ class AdminController extends Controller
      */
     public function destroy(Admin $administradore)
     {
-        //
+        $administradore->delete();
     }
 }
