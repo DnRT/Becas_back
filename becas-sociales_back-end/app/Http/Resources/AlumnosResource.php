@@ -23,7 +23,8 @@ class AlumnosResource extends JsonResource
                 'apellido' => $this->Apellido,
                 'edad' => $this->Edad,
                 'direccion' => $this->Direccion,
-                'correo' => $this->Correo
+                'correo' => $this->Correo,
+                'contrasena' => $this->Contrasena
             ]
         ];
     }

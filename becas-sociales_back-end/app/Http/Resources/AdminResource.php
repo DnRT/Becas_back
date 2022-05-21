@@ -22,7 +22,8 @@ class AdminResource extends JsonResource
                 'rut' => $this->Rut,
                 'nombre' => $this->Nombre,
                 'apellido' => $this->Apellido,
-                'correo' => $this->Correo
+                'correo' => $this->Correo,
+                'contrasena' => $this->Contrasena
             ]
         ];
     }
