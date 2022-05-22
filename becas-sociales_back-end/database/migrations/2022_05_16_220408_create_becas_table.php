@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('becas', function (Blueprint $table) {
+        Schema::create('beca', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('descripcion');
+            $table->integer('can_post');
             $table->timestamps();
         });
     }

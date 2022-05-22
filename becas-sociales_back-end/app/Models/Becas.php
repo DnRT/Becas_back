@@ -9,6 +9,6 @@ class Becas extends Model
 {
     use HasFactory;
 
-    protected $table = 'beca';
-    protected $fillable = ['nombre'];
+    protected $table = 'becas';
+    protected $fillable = ['nombre','descirpcion','can_post'];
 }

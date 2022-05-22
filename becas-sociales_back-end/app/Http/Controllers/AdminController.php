@@ -39,13 +39,8 @@ class AdminController extends Controller
      */
     public function store(StoreadminRequest $request)
     {
-        $response = DB::table('administrador')->insert([
-            'Rut' => $request->rut,
-            'Nombre' => $request->nombre,
-            'Apellido' => $request->apellido,
-            'Correo' => $request->correo,
-            'Contrasena' => $request->contrasena,
-        ]);
+        $admin = Admin::create($request->validate());
+        return new AdminResource($admin);
     }
 
     /**
@@ -79,7 +74,10 @@ class AdminController extends Controller
      */
     public function update(UpdateadminRequest $request, Admin $administradore)
     {
-        //
+        return Log::info($request);
+        /* $administradore->update([
+            'Rut'=> $request
+        ]); */
     }
 
     /**
@@ -90,6 +88,6 @@ class AdminController extends Controller
      */
     public function destroy(Admin $administradore)
     {
-        //
+        $administradore->delete();
     }
 }

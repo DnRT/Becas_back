@@ -15,15 +15,16 @@ class AlumnosResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->Id,
+            'id' => $this->id,
             'tipo' => 'Alumno',
             'data' => [
-                'rut' => $this->Rut,
-                'nombre' => $this->Nombre,
-                'apellido' => $this->Apellido,
-                'edad' => $this->Edad,
-                'direccion' => $this->Direccion,
-                'correo' => $this->Correo
+                'rut' => $this->rut,
+                'nombre' => $this->nombre,
+                'apellido' => $this->apellido,
+                'edad' => $this->edad,
+                'direccion' => $this->direccion,
+                'correo' => $this->correo,
+                'contrasena' => $this->contrasena
             ]
         ];
     }

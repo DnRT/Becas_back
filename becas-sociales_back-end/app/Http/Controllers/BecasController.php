@@ -38,7 +38,8 @@ class BecasController extends Controller
      */
     public function store(StorebecasRequest $request)
     {
-        //
+        $beca = Becas::create($request->validate());
+        return new BecasResource($beca);
     }
 
     /**
@@ -83,6 +84,6 @@ class BecasController extends Controller
      */
     public function destroy(Becas $beca)
     {
-        //
+        $beca->delete();
     }
 }
