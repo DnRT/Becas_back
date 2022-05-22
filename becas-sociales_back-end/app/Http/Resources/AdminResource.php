@@ -19,11 +19,11 @@ class AdminResource extends JsonResource
             'id' => $this->id,
             'tipo' => 'Administrador',
             'data' => [
-                'rut' => $this->Rut,
-                'nombre' => $this->Nombre,
-                'apellido' => $this->Apellido,
-                'correo' => $this->Correo,
-                'contrasena' => $this->Contrasena
+                'rut' => $this->rut,
+                'nombre' => $this->nombre,
+                'apellido' => $this->apellido,
+                'correo' => $this->correo,
+                'contrasena' => $this->contrasena
             ]
         ];
     }

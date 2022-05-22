@@ -18,13 +18,13 @@ class AlumnosResource extends JsonResource
             'id' => $this->id,
             'tipo' => 'Alumno',
             'data' => [
-                'rut' => $this->Rut,
-                'nombre' => $this->Nombre,
-                'apellido' => $this->Apellido,
-                'edad' => $this->Edad,
-                'direccion' => $this->Direccion,
-                'correo' => $this->Correo,
-                'contrasena' => $this->Contrasena
+                'rut' => $this->rut,
+                'nombre' => $this->nombre,
+                'apellido' => $this->apellido,
+                'edad' => $this->edad,
+                'direccion' => $this->direccion,
+                'correo' => $this->correo,
+                'contrasena' => $this->contrasena
             ]
         ];
     }

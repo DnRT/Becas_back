@@ -38,7 +38,7 @@ class AlumnosController extends Controller
      */
     public function store(StoreAlumnoRequest $request)
     {
-        $alumno = Alumno::create($request->validate());
+        $alumno = Alumno::create($request->validated());
         return new AlumnosResource($alumno);
     }
 

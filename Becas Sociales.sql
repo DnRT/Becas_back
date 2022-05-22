@@ -1,50 +1,19 @@
-CREATE DATABASE IF NOT EXISTS becas_sociales;
-
 use becas_sociales; 
-
- CREATE TABLE IF NOT EXISTS Alumnos
- (
- Id int primary key not null auto_increment,
- Rut varchar(12) unique not null,
- Nombre varchar(25) not null,
- Apellido Varchar(25) not null,
- Edad int,
- Direccion varchar(50),
- Correo varchar(50) not null,
- Contrasena varchar(25) not null
- );
  
- CREATE TABLE IF NOT EXISTS Beca
- (
- Id_beca int not null,
- Nombre_de_beca varchar(25) not null
- );
-
- CREATE TABLE IF NOT EXISTS Administrador
- (
- ID int primary key not null auto_increment,
- Rut varchar(12) unique not null,
- Nombre varchar(25) not null,
- Apellido varchar(25) not null,
- Correo varchar(50) not null,
- Contrasena varchar(25) not null
- );
- 
-INSERT INTO Alumnos (Rut, Nombre, Apellido, Edad, Direccion, Correo, Contrasena) 
+INSERT INTO alumno (rut, nombre, apellido, edad, direccion, correo, contrasena, id_beca) 
 VALUES 
-('18345678-9', 'Nicolas', 'Cortes', 25, 'avenida francia','nico16.m@hotmail.com','nico1697'), 
-('19654789-0', 'Eugenio', 'Chandia', 23, 'calle lautaro','eugenio.chandia@outlook.com','eu1ge9ni9o9'),
-('20451266-6', 'Javier', 'Rodriguez', 22, 'calle lautaro','javier2000zz@gmail.com','javier160100'),
-('19124556-7', 'Martin', 'Morales', 24, 'calle lautaro','martoles.q@yahoo.com','martinmorales1998'),  
-('21004215-4', 'Erick', 'Quiroz', 18, 'avenida 03','elerick02.ch@gmail.com','0erick2');
+('18345678-9', 'Nicolas', 'Cortes', 25, 'avenida francia','nico16.m@hotmail.com','nico1697',0), 
+('19654789-0', 'Eugenio', 'Chandia', 23, 'calle lautaro','eugenio.chandia@outlook.com','eu1ge9ni9o9',0),
+('20451266-6', 'Javier', 'Rodriguez', 22, 'calle lautaro','javier2000zz@gmail.com','javier160100',0),
+('19124556-7', 'Martin', 'Morales', 24, 'calle lautaro','martoles.q@yahoo.com','martinmorales1998',0),  
+('21004215-4', 'Erick', 'Quiroz', 18, 'avenida 03','elerick02.ch@gmail.com','0erick2',0);
 
-INSERT INTO Beca(Id_beca, Nombre_de_beca) 
+INSERT INTO beca(id, nombre, descripcion, can_post) 
 VALUES 
-(0001,'Beca 1'),
-(0002,'Beca 2'),
-(0003,'Beca 3');
+(0001,'Beca estudiante superior','descripcion 1', 0),
+(0002,'Beca talento deportivo y/o artistico', 'descripcion 2', 0);
 
-INSERT INTO Administrador (Rut, Nombre, Apellido, Correo, Contrasena) 
+INSERT INTO administrador (rut, nombre, apellido, correo, contrasena) 
 VALUES 
 ('12345678-9', 'Rene', 'Urbina', 'rurbina@cartagena.cl','admin'), 
 ('98765432-1', 'Carla', 'Munoz', 'cmunoz@cartagena.cl','root'), 
