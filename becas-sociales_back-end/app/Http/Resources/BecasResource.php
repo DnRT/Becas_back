@@ -16,9 +16,11 @@ class BecasResource extends JsonResource
     {
         return [
             'id'=> $this->id,
-            'nombre'=> $this->nombre,
-            'descripcion' => $this->decripcion,
-            'can_post' => $this->can_post
+            'data' => [
+                'nombre'=> $this->nombre,
+                'descripcion' => $this->decripcion,
+                'can_post' => $this->can_post
+            ]
         ];
     }
 }
