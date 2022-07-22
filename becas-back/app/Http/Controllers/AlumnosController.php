@@ -39,6 +39,7 @@ class AlumnosController extends Controller
     public function store(StoreAlumnoRequest $request)
     {
         $alumno = Alumno::create($request->validated());
+        mkdir($alumno->ubicacion_archivos,0777,true);
         return new AlumnosResource($alumno);
     }
 
