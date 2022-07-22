@@ -21,7 +21,9 @@ class AlumnoFactory extends Factory
             'nombre' => $this->faker->nombre,
             'apellido' => $this->faker->apellido,
             'edad' => $this->faker->edad,
-            'direccion' => $this->faker->direccion
+            'direccion' => $this->faker->direccion,
+            'id_beca' => $this->faker->id_beca,
+            'ubicacion_archivos' => $this->faker->ubicacion_archivos
             
         ];
     }
