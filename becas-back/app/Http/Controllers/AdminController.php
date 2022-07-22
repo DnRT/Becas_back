@@ -74,10 +74,8 @@ class AdminController extends Controller
      */
     public function update(UpdateadminRequest $request, Admin $administradore)
     {
-        return Log::info($request);
-        /* $administradore->update([
-            'Rut'=> $request
-        ]); */
+        $administradore->fill($request->all());
+        $administradore->save();
     }
 
     /**
