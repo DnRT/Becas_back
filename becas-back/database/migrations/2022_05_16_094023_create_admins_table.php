@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('apellido');
             $table->string('correo');
             $table->string('contrasena');
+            $table->integer('id_beca');
+            $table->string('ubicacion_archivos');
             $table->timestamps();
         });
     }
