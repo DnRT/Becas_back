@@ -33,7 +33,9 @@ class StoreAlumnoRequest extends FormRequest
             'correo' => 'required|unique:alumno',
             'contrasena' => 'required',
             'edad' => 'required',
-            'direccion' => 'required'
+            'direccion' => 'required',
+            'ubicacion_archivos' => 'required',
+            'id_beca' => 'required'
         ];
     }
     protected function failedValidation(Validator $validator):void{
@@ -49,7 +51,9 @@ class StoreAlumnoRequest extends FormRequest
             'rut.unique' => 'El rut ya fue ingresado',
             'correo.unique' => 'El correo ya fue ingresado',
             'edad.required' => 'La edad es requerida',
-            'direccion.required' => 'La direccion es requerido'
+            'direccion.required' => 'La direccion es requerido',
+            'ubicacion_archivos.required' => 'Error al crear carpeta',
+            'id_beca.required' => 'Error registrar'
         ];
     }
 }

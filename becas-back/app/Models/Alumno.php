@@ -11,5 +11,5 @@ class Alumno extends Model
     protected $table = 'alumno';
     protected $primaryKey = 'id';
     protected $keyTipe = 'integer';
-    protected $fillable = ['rut','nombre','apellido','edad','direccion','correo','contrasena','ubicacion_archivos'];
+    protected $fillable = ['rut','nombre','apellido','edad','direccion','correo','contrasena','id_beca','ubicacion_archivos'];
 }
