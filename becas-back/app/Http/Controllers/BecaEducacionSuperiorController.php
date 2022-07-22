@@ -74,7 +74,8 @@ class BecaEducacionSuperiorController extends Controller
      */
     public function update(Updatebeca_educacion_superiorRequest $request, beca_educacion_superior $beca_educacion_superior)
     {
-        //
+        $beca_educacion_superior->fill($request->all());
+        $beca_educacion_superior->save();
     }
 
     /**

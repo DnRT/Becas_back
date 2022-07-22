@@ -73,7 +73,8 @@ class BecasController extends Controller
      */
     public function update(UpdatebecasRequest $request, Becas $beca)
     {
-        //
+        $beca->fill($request->all());
+        $beca->save();
     }
 
     /**

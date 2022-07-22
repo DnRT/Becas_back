@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnosController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BecasController;
+use App\Http\Controllers\BecaTalentoController;
+use App\Http\Controllers\BecaEducacionSuperiorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +23,6 @@ Route::prefix('test')->group(function() {
     Route::apiResource('/alumnos', AlumnosController::class);
     Route::apiResource('/administradores', AdminController::class);
     Route::apiResource('/becas', BecasController::class);
+    Route::apiResource('/beca_talento', BecaTalentoController::class);
+    Route::apiResource('/beca_educacion_superior', BecaEducacionSuperiorController::class);
 });

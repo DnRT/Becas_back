@@ -74,7 +74,8 @@ class BecaTalentoController extends Controller
      */
     public function update(Updatebeca_talentoRequest $request, beca_talento $beca_talento)
     {
-        //
+        $beca_talento->fill($request->all());
+        $beca_talento->save();
     }
 
     /**

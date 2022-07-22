@@ -73,7 +73,15 @@ class AlumnosController extends Controller
      */
     public function update(UpdateAlumnoRequest $request, Alumno $alumno)
     {
-        //
+        $aux = $request->all();
+        $alumno->update([
+            'edad'=>$aux['edad'],
+            'direccion'=>$aux['direccion'],
+            'correo'=>$aux['correo'],
+            'contrasena'=>$aux['contrasena'],
+            'id_beca'=>$aux['id_beca']
+        ]);
+        $alumno->save();
     }
 
     /**
